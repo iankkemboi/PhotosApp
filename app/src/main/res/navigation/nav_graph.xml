@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/ListFragment">
+    <fragment
+        android:id="@+id/ListFragment"
+        android:name="com.dkb.photosapp.ui.PhotosListFragment"
+        tools:layout="@layout/fragment_photos_list" >
+        <action
+            android:id="@+id/action_ListFragment_to_DetailFragment"
+            app:destination="@id/DetailFragment">
+
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/DetailFragment"
+        android:name="com.dkb.photosapp.ui.DetailFragment"
+        tools:layout="@layout/fragment_photos_details" >
+        <argument
+            android:name="photoId"
+            app:argType="string" />
+
+
+    </fragment>
+
+</navigation>
